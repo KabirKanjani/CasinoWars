@@ -62,7 +62,7 @@ module.exports.verify=(req,res)=>
       from:process.env.USER,
       to:email,
       subject:'Casino War Game Reset',
-      html:'<h1 style="color=red">Casino War Game</h1><br><h2 >Hope you get back to the playing table soon and below is your Password Reset Link<br>:'+link+"</h2>",
+      html:'<h1 style="color:red;">Casino War Game</h1><br><h2 >Hope you get back to the playing table soon and below is your Password Reset Link<br>:'+link+"</h2>",
       // text:'Hey,Your Password Reset Link:'+link      
     };
     transporter.sendMail(mailOptions,function(err,info){
