@@ -49,7 +49,7 @@ module.exports.verify=(req,res)=>
 
   User.updateOne({user_email:email},{$set:{resetPasswordToken:token}}).then(User=>
   {
-    let link = "https://casinowargame.herokuapp.com/reset_password/"+token;
+    let link = "https://casinowars.herokuapp.com/reset_password/"+token;
     var transporter=nodemailer.createTransport({
       host: process.env.HOST,
       port:process.env.PORT1,
