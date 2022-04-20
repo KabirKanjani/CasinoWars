@@ -59,7 +59,7 @@ module.exports.verify=(req,res)=>
       }
     });
     var mailOptions={
-      from:PROCESS.env.USER,
+      from:process.env.USER,
       to:email,
       subject:'Password Reset Email Link',
       html:'<h4>Hey,Your Password Reset Link:'+link+"</h4>",
