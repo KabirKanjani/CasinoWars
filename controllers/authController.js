@@ -61,8 +61,8 @@ module.exports.verify=(req,res)=>
     var mailOptions={
       from:process.env.USER,
       to:email,
-      subject:'Password Reset Email Link',
-      html:'<h4>Hey,Your Password Reset Link:'+link+"</h4>",
+      subject:'Casino War Game Reset',
+      html:'<h2>Hope you get back to the playing table soon and here is your Password Reset Link:'+link+"</h2>",
       // text:'Hey,Your Password Reset Link:'+link      
     };
     transporter.sendMail(mailOptions,function(err,info){
