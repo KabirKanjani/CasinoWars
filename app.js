@@ -28,9 +28,10 @@ app.use("/img",express.static(__dirname+'/img'));
 app.use(cookieParser());
 
 const DB=process.env.DATABASE;
+console.log(DB);
 mongoose.connect(DB,{}).then(()=>{
  
-}).catch((err)=>console.log(DB));
+}).catch((err)=>console.log(err));
 
 
 // app.get("*",checkUser);
