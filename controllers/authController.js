@@ -51,11 +51,11 @@ module.exports.verify=(req,res)=>
   {
     let link = "https://casinowargame.herokuapp.com/reset_password/"+token;
     var transporter=nodemailer.createTransport({
-      host: PROCESS.env.HOST,
-      port:PROCESS.env.PORT1,
+      host: process.env.HOST,
+      port:processs.env.PORT1,
       auth:{
-        user:PROCESS.env.USER,
-        pass:PROCESS.env.PASS,        
+        user:process.env.USER,
+        pass:process.env.PASS,        
       }
     });
     var mailOptions={
