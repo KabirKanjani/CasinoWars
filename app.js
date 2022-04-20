@@ -61,6 +61,6 @@ app.use(authRoutes);
 // app.listen(3000,"192.168.203.139"||"localhost",(err)=>
 // {
 // })
-app.listen(3000,(err)=>
+app.listen(process.env.PORT||3000,(err)=>
 {
 })
