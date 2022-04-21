@@ -13,7 +13,7 @@
 	<div class="logo"><img src="../img/coin.png"></div>
 	<ul>
 		<% if (data) { %>
-			<li><a href="/logout" class="btn">Logout</a></li>
+			<li><a href="/logout" onclick="update()" class="btn">Logout</a></li>
 		  <% } else { %>
 			  <li><a href="/login" class="btn">Log In</a></li>
 			<li><a href="/signup" class="btn">Sign up</a></li>
@@ -56,7 +56,12 @@
 	</div>
 	<div class="Play"><button class="playbtn" onclick='update()'>Play</button></div>	
 </body>
-<script>			
+<script>
+	window.onbeforeunload = function(event)
+    {
+        update();
+    };		
+
 	async function update()
 {		
 	try{		

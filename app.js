@@ -34,7 +34,6 @@ mongoose.connect(DB,{}).then(()=>{
 }).catch((err)=>console.log(err));
 
 
-// app.get("*",checkUser);
 app.post("/update",async(req,res)=>
 {
     const token=req.cookies.jwt;

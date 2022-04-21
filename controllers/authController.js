@@ -258,8 +258,13 @@ module.exports.login_post = async (req, res) => {
     }
   
   }
-module.exports.logout_get=(req,res)=>
+module.exports.logout_get=async (req,res)=>
 {
+  const token=req.cookies.jwt;
+  const decoded = jwt.verify(token, "Casino War Secret");    
+  var userId = decoded.id;    
+  await User.updateOne({_id:userId},{$set:{user_balance:req.body.balance}});
+ 
     res.cookie('jwt','',{maxAge:1});
     res.redirect("/");    
 }
